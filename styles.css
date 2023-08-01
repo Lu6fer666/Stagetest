@@ -1,0 +1,951 @@
+/* Réalisation commencé à partir du modèle mobile 320px => 1920px */
+/* J'ai tenté de prendre de la liberté avec difficultée sur le responsive du 320px à 1920px */
+/* Importation de la police Google Fonts pour le site */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Trykker&display=swap');
+/* Styles généraux pour le corps du site */
+body {
+    margin: 0; 
+    padding: 0; 
+    min-height: 100vh; 
+    background: rgb(4,90,64);
+    background: linear-gradient(131deg, #045A40 0%, #043B5A 39.31%);
+}
+    /* Styles pour les écrans de petite taille (320px à 768px) */
+    @media screen and (min-width: 320px) and (max-width: 768px) {
+    body {
+        margin: 0; 
+        padding: 0; 
+        min-height: 100vh; 
+        background: rgb(4,90,64);
+        background: linear-gradient(131deg, #045A40 0%, #043B5A 39.31%);
+    }
+
+    .title {
+        color: #FFF;
+        text-align: right;
+        font-family: Trykker;
+        font-size: 1rem;
+        line-height: normal;
+        margin-right: 2.44rem;
+        margin-top: 2.56rem;
+        margin-left: 5.5rem;
+    }
+    .search-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        max-width: 20rem;
+        margin-left: 2.3rem;
+        margin-right: 2.44rem;
+    }
+    .search-box {
+        padding-left: 0.75rem;
+        background-color: transparent;
+        border: 1px solid;
+        border-image: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+        border-image-slice: 1;
+        border-radius: 3.125rem;
+        width: 15rem;
+        height: 1.75rem;
+        outline: none;
+        font-family: Montserrat;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        display: flex;
+  }
+  .search-button {
+        width: 6.50rem;
+        height: 1.75rem;
+        background-color: transparent;
+        color: #FFF;
+        text-align: center;
+        font-family: Montserrat;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        border: 1px solid;
+        border-image: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+        border-image-slice: 1;
+        border-radius: 3.125rem;
+        outline: none;
+        cursor: pointer;
+        margin-top: 1.75rem;
+    }
+    .userSearched-container {
+        font-family: Montserrat;
+        border: 1px solid #FFF;
+        border-radius: 3rem;
+        background: linear-gradient(225deg, rgba(4, 90, 64, 0.40) 0%, rgba(255, 255, 255, 0.00) 100%);
+        margin: 3rem 1rem 3rem 1rem;
+        padding: 1.5rem;
+        display: flex;
+        justify-content: center;
+    }
+    .card {
+        flex-direction: column;
+        align-items: center; 
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 8rem repeat(2, 5rem) 20rem repeat(2, 8rem);
+        margin: 0 auto;
+        
+    }
+    .cardPicture {
+        grid-area: 1 / 2 / 2 / 3;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .cardName {
+        grid-area: 2 / 2 / 3 / 3;
+        color: #FFF;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        line-height: 0;
+        padding-top: 0.5em;
+        
+    }
+    .cardName h2 {
+        font-size: 1.25rem;
+    }
+    .cardName h2, .cardName p {
+        margin: 0.8rem; 
+    }
+    .cardGrid {
+        grid-area: 3 / 1 / 4 / 4;
+        display: flex;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        color: #FFF;
+    }
+    .cardRepos {
+        line-height: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        grid-area: 3 / 1 / 4 / 2;
+    }
+    .cardFollowers {
+        line-height: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        grid-area: 3 / 2 / 4 / 3;
+    }
+    .cardFollowing {
+        line-height: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        grid-area: 3 / 3 / 4 / 4;
+    }
+    .socialMedias {
+        grid-area: 4 / 2 / 5 / 3;
+        display: flex;
+        flex-direction: column;
+    }
+    .biography {
+        grid-area: 5 / 2 / 6 / 3;
+    }
+    .cardFooter h2 {
+        font-weight: 300;
+        color: #fff;
+        font-size: 1rem;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .cardFooter {
+        grid-area: 6 / 2 / 7 / 3;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem;
+        color: #FFF;
+    }
+    li, p {
+        font-size: 1rem;
+    }
+    li {
+        display: flex;
+        margin-bottom: 2.3rem;
+    }   
+    li svg {
+        margin-right: 0.6rem; 
+        vertical-align: middle;
+    }
+    ul {
+        list-style: none;
+    }
+    a {
+        color: #FFF; 
+        text-decoration: none; 
+    }
+    .biography p{
+        color: #FFF;
+        font-family: Montserrat;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin: 0;
+  }
+  .biography h2 {
+        font-weight: 400;
+        color: #FFF;
+        font-size: 1rem;
+        margin: 0;
+  }
+}
+/* Styles pour les écrans de taille moyenne (768px à 1440px) */
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+    .mainContainer {
+        display: flex;
+        justify-content: space-between; 
+        margin: 5rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+    header {
+        grid-area: 1 / 1 / 2 / 2;
+        margin-right: 5rem;
+    }
+
+    .userSearched-container {
+        grid-area: 1 / 2 / 2 / 3;
+        margin-top: 4rem;
+        margin-bottom: 7rem;
+        font-family: Montserrat;
+        border: 1px solid #FFF;
+        border-radius: 3.125rem;
+        background: linear-gradient(225deg, rgba(4, 90, 64, 0.40) 0%, rgba(255, 255, 255, 0.00) 100%);
+        padding: 1.5rem;
+        display: flex;
+        justify-content: flex-end;
+        height: 100vh;
+        align-items: center; 
+    }
+
+    body {
+        margin: 0; 
+        padding: 0; 
+        min-height: 100vh; 
+        background: rgb(4,90,64);
+        background: linear-gradient(131deg, #045A40 0%, #043B5A 39.31%);
+    }
+
+    .title {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        color: #FFF;
+        text-align: right;
+        font-family: Trykker;
+        font-size: 2rem;
+        line-height: normal;
+        margin-top: 2.56rem;
+    }
+    .search-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        margin-left: 0rem;
+    }
+    .search-box {
+        padding-left: 0.75rem;
+        background-color: transparent;
+        border: 1px solid;
+        border-image: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+        border-image-slice: 1;
+        border-radius: 3.125rem;
+        width: 30rem;
+        height: 3rem;
+        outline: none;
+        font-family: Montserrat;
+        font-size: 1.6rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        display: flex;
+  }
+  .search-button {
+        width: 6.50rem;
+        height: 3rem;
+        background-color: transparent;
+        color: #FFF;
+        text-align: center;
+        font-family: Montserrat;
+        font-size: 1.6rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        border: 1px solid;
+        border-image: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+        border-image-slice: 1;
+        border-radius: 3.125rem;
+        outline: none;
+        cursor: pointer;
+        margin-top: 3rem;
+    }
+    .userSearched-container {
+        font-family: Montserrat;
+        border: 1px solid #FFF;
+        border-radius: 3rem;
+        margin: 3rem 1rem 3rem 1rem;
+        padding: 1.5rem;
+        display: flex;
+        justify-content: center;
+    }
+    .card {
+        flex-direction: column;
+        align-items: center; 
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 8rem repeat(2, 5rem) 20rem repeat(2, 8rem);
+        margin: 0 auto;
+        
+    }
+    .cardPicture {
+        grid-area: 1 / 2 / 2 / 3;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .cardName {
+        grid-area: 2 / 2 / 3 / 3;
+        color: #FFF;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        line-height: 0;
+        padding-top: 0.5em;
+        
+    }
+    .cardName h2 {
+        font-size: 1.25rem;
+    }
+    .cardName h2, .cardName p {
+        margin: 0.8rem; 
+    }
+    .cardGrid {
+        grid-area: 3 / 1 / 4 / 4;
+        display: flex;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        color: #FFF;
+    }
+    .cardRepos {
+        line-height: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        grid-area: 3 / 1 / 4 / 2;
+    }
+    .cardFollowers {
+        line-height: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        grid-area: 3 / 2 / 4 / 3;
+    }
+    .cardFollowing {
+        line-height: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        grid-area: 3 / 3 / 4 / 4;
+    }
+    .socialMedias {
+        grid-area: 4 / 2 / 5 / 3;
+        display: flex;
+        flex-direction: column;
+    }
+    .biography {
+        grid-area: 5 / 2 / 6 / 3;
+    }
+    .cardFooter h2 {
+        font-weight: 300;
+    color: #fff;
+    font-size: 1rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    }
+
+    .cardFooter {
+        grid-area: 6 / 2 / 7 / 3;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem;
+        color: #FFF;
+    }
+    li, p {
+        font-size: 1rem;
+    }
+    li {
+        display: flex;
+        margin-bottom: 2.3rem;
+    }   
+    li svg {
+        margin-right: 0.6rem;
+        vertical-align: middle;
+    }
+    ul {
+        list-style: none;
+    }
+    a {
+        color: #FFF; 
+        text-decoration: none; 
+    }
+    .biography p{
+        color: #FFF;
+        font-family: Montserrat;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin: 0;
+  }
+  .biography h2 {
+        font-weight: 400;
+        color: #FFF;
+        font-size: 1rem;
+        margin: 0;
+  }
+}
+/* Styles pour les écrans larges (à partir de 1440px) */
+@media screen and (min-width: 1440px){
+
+    .mainContainer {
+        display: flex;
+        justify-content: space-between;
+        margin: 5rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 1rem;
+      }
+
+    header {
+        grid-area: 1 / 1 / 2 / 2;
+        margin-right: 5rem;
+    }
+
+    .userSearched-container {
+        grid-area: 1 / 2 / 2 / 3;
+        margin-top: 4rem;
+        margin-bottom: 7rem;
+        font-family: Montserrat;
+        border: 1px solid #FFF;
+        border-radius: 3.125rem;
+        background: linear-gradient(225deg, rgba(4, 90, 64, 0.40) 0%, rgba(255, 255, 255, 0.00) 100%);
+        padding: 1.5rem;
+        height: 40rem;
+        align-items: center; 
+    }
+
+    body {
+        margin: 0; 
+        padding: 0; 
+        min-height: 100vh; 
+        background: rgb(4,90,64);
+        background: linear-gradient(131deg, #045A40 0%, #043B5A 39.31%);
+    }
+
+    .title {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        color: #FFF;
+        text-align: right;
+        font-family: Trykker;
+        font-size: 2rem;
+        line-height: normal;
+        margin-top: 2.56rem;
+    }
+
+    .search-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        margin-left: 0rem;
+    }
+
+    .search-box {
+        padding-left: 0.75rem;
+        background-color: transparent;
+        border: 1px solid;
+        border-image: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+        border-image-slice: 1;
+        border-radius: 3.125rem;
+        width: 30rem;
+        height: 3rem;
+        outline: none;
+        font-family: Montserrat;
+        font-size: 1.6rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        display: flex;
+  }
+
+  .search-button {
+        width: 6.50rem;
+        height: 3rem;
+        background-color: transparent;
+        color: #FFF;
+        text-align: center;
+        font-family: Montserrat;
+        font-size: 1.6rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        border: 1px solid;
+        background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+        border-radius: 3.125rem;
+        outline: none;
+        cursor: pointer;
+        margin-top: 3rem;
+    }
+
+    .cardPicture, .cardName {
+        grid-area: 1 / 1 / 2 / 2;
+    }
+    .socialMedias {
+        grid-area: 2 / 1 / 3 / 2;
+    }
+
+    .cardGrid {
+        grid-area: 1 / 2 / 2 / 3;
+    }
+    .biography {
+        grid-area: 2 / 2 / 3 / 3;
+    }
+    .card {
+        display: grid;
+        grid-template-columns: 12rem 1fr;
+        grid-template-rows: auto auto;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        margin: 0 auto;
+        
+    }
+
+    .cardPicture {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 3rem;
+    }
+
+    .cardPicture svg {
+        width: 9.75rem;
+        height: 9.75rem;
+    }
+
+    .cardName {
+        color: #FFF;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        line-height: 0;
+        margin-top: 14rem;
+    }
+
+    .cardName h2 {
+        font-size: 1.25rem;
+    }
+
+    .cardName h2, .cardName p {
+        margin: 0.8rem; 
+    }
+
+    .cardGrid {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        color: #FFF;
+    }
+
+    .cardRepos {
+        line-height: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cardFollowers {
+        line-height: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cardFollowing {
+        line-height: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .socialMedias {
+        display: flex;
+        flex-direction: column;
+        margin-top: 2.2rem;
+    }
+
+    .biography {
+        flex-direction: column;
+        margin-left: 1.75rem;
+    }
+
+    .cardFooter h2 {
+    font-weight: 300;
+    color: #fff;
+    font-size: 1rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: right;
+    }
+
+    .cardFooter {
+        display: flex;
+        justify-content:end;
+        font-size: 1rem;
+        color: #FFF;
+        align-items:end;
+        grid-area: 3 / 2 / 4 / 3;
+    }
+
+    li, p {
+        font-size: 1rem;
+    }
+
+    li {
+        display: flex;
+        margin-bottom: 2.3rem;
+    }   
+
+    li svg {
+        margin-right: 0.6rem; 
+        vertical-align: middle;
+        width: 1.7rem;
+        height: 1.7rem;
+        flex-shrink: 0;
+        margin-right: 0.6rem; 
+        vertical-align: middle;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    a {
+        color: #FFF; 
+        text-decoration: none; 
+    }
+
+    .biography p {
+        color: #FFF;
+        font-family: Montserrat;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin: 0;
+  }
+
+  .biography h2 {
+        font-weight: 400;
+        color: #FFF;
+        font-size: 1rem;
+        margin: 0;
+  }
+}
+/* Styles pour les écrans très larges (à partir de 1920px) */
+@media screen and (min-width: 1920px) {
+    /* Container de la partie gauche du site*/
+    .mainContainer {
+        display: flex;
+        justify-content: space-between;
+        margin: 5rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 3rem;
+      }
+      /* Titre, partie recherche de la page */
+    header {
+        grid-area: 1 / 1 / 2 / 2;
+        margin-right: 5rem;
+    }
+    /* Container de l'utilisateur */
+    .userSearched-container {
+        grid-area: 1 / 2 / 2 / 3;
+        margin-top: 4rem;
+        margin-bottom: 7rem;
+        font-family: Montserrat;
+        border: 1px solid #FFF;
+        border-radius: 3.125rem;
+        background: linear-gradient(225deg, rgba(4, 90, 64, 0.40) 0%, rgba(255, 255, 255, 0.00) 100%);
+        padding: 1.5rem;
+        height: 40rem;
+        align-items: center;
+    }
+
+    body {
+        overflow: hidden; /* Empêcher de défiler la page */
+        margin: 0; 
+        padding: 0; 
+        min-height: 100vh; 
+        background: rgb(4,90,64);
+        background: linear-gradient(131deg, #045A40 0%, #043B5A 39.31%);
+    }
+
+    .title {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        color: #FFF;
+        text-align: right;
+        font-family: Trykker;
+        font-size: 3.5rem;
+        line-height: normal;
+        margin-top: 2.56rem;
+    }
+
+    .search-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        margin-left: 0rem;
+    }
+
+    .search-box {
+        padding-left: 0.75rem;
+        background-color: transparent;
+        border: 1px solid;
+        border-image: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+        border-image-slice: 1;
+        border-radius: 3.125rem;
+        width: 35rem;
+        height: 3.5rem;
+        outline: none;
+        font-family: Montserrat;
+        font-size: 1.6rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        display: flex;
+  }
+
+  .search-button {
+        width: 17rem;
+        height: 3.5rem;
+        background-color: transparent;
+        color: #FFF;
+        text-align: center;
+        font-family: Montserrat;
+        font-size: 1.6rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        border: 1px solid;
+        background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+        border-radius: 3.125rem;
+        outline: none;
+        cursor: pointer;
+        margin-top: 3.30rem;
+    }
+
+    .cardPicture, .cardName {
+        grid-area: 1 / 1 / 2 / 2;
+    }
+    .socialMedias {
+        grid-area: 2 / 1 / 3 / 2;
+    }
+
+    .cardGrid {
+        grid-area: 1 / 2 / 2 / 3;
+    }
+    .biography {
+        grid-area: 2 / 2 / 3 / 3;
+
+    }
+    .card {
+        display: grid;
+        grid-template-columns: 12rem 1fr;
+        grid-template-rows: auto auto;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        margin: 0 auto;
+        
+    }
+
+    .cardPicture {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 3rem;
+        margin-left: 5rem;
+    }
+
+    .cardPicture svg {
+        width: 9.75rem;
+        height: 9.75rem;
+    }
+
+    .cardName {
+        color: #FFF;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        line-height: 1;
+        margin-top: 14rem;
+        margin-left: 4rem;
+    }
+
+    .cardName h2 {
+        font-size: 1.85rem;
+        white-space: nowrap;
+    }
+
+    .cardName h2, .cardName p {
+        margin: 0.8rem;
+        margin-left: 1.5rem;
+    }
+    .cardName p {
+        font-size: 1.25rem;
+    }
+    .cardGrid {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        color: #FFF;
+        margin-bottom: 5rem;
+        margin-left: 1rem;
+    }
+
+    .cardRepos {
+        line-height: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 1.25rem;
+    }
+    .cardRepos strong {
+        font-size: 1.875rem;
+    }
+    .cardFollowers {
+        line-height: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 1.25rem;
+    }
+    .cardFollowers strong {
+        font-size: 1.875rem;
+    }
+    .cardFollowing strong {
+        font-size: 1.875rem;
+    }
+    .cardFollowing {
+        line-height: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 1.25rem;
+    }
+
+    .socialMedias {
+        display: flex;
+        flex-direction: column;
+        margin-top: 2.2rem;
+    }
+
+    .biography {
+        flex-direction: column;
+        margin-left: 5rem;
+        font-size: 1.25rem;
+    }
+
+    .cardFooter h2 {
+        font-weight: 300;
+        color: #fff;
+        font-size: 1.25rem;
+        text-align: right;
+    }
+
+    .cardFooter {
+        grid-area: 2 / 2 / 3 / 3;
+        
+    }
+
+    li, p {
+        font-size: 1.25rem;
+    }
+
+    li {
+        display: flex;
+        margin-bottom: 2.3rem;
+        white-space: nowrap;
+    }   
+
+    li svg {
+        width: 1.875rem;
+        height: 1.80288rem;
+        flex-shrink: 0;
+        margin-right: 0.6rem; 
+        vertical-align: middle;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    a {
+        color: #FFF; 
+        text-decoration: none; 
+    }
+
+    .biography p {
+        color: #FFF;
+        font-family: Montserrat;
+        font-size: 1.25rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin: 0;
+  }
+
+  .biography h2 {
+        font-weight: 400;
+        color: #FFF;
+        font-size: 1.25rem;
+        margin: 0;
+  }
+  .shadow {
+    z-index: 0;
+    width: 1578px;
+    height: 56px;
+    margin-bottom: 132px;
+    border-radius: 1578px;
+    background: radial-gradient(50.00% 50.00% at 51.62% 50.00%, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.00) 100%);
+    }
+}
+
